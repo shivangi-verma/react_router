@@ -1,9 +1,14 @@
-// src/pages/Home.jsx
+// src/Pages/Home.jsx
+import { useUserContext } from "../Context/UserProvider";
+
 function Home() {
+  const { user, theme } = useUserContext();
+
   return (
     <div>
       <h1>Home</h1>
-      <p>Welcome to the React Router demo 🏡</p>
+      <p>Welcome back, {user.name} 👋</p>
+      <p>Current theme: {theme}</p>
     </div>
   );
 }
